@@ -1,0 +1,22 @@
+div(title = "Software Development (general)")
+	p.
+		Rather than focusing on too much deeply learning specific technologies, I value understanding fundemental concepts that carry over across different domains. I like seeing the types of patterns different programming languages encourage or discourage and how that manifests into architecture.
+
+	p Here's a list of things I have experience with.
+
+	ul
+		li C/C++
+			ul
+				li Pointers and dynamic allocation
+				li Memory management without a Garbage Collector
+		li JavaScript/CoffeeScript
+			ul
+				li Core functional programming concepts such as composition, currying, higher order functions, map, filter, reduce, closures
+		li Java and Objective-C
+			ul
+				li Object Oriented Programming principles such as encapsulation, inheritance, and polymorphism
+
+		li (a little) Haskell
+			ul
+				li Functional purity, using the IO Monad
+				li Pattern matching, thinking in terms of recursion and expressions
