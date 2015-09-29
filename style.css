@@ -1,0 +1,152 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700");
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #4a4a4a;
+}
+.top-header {
+  height: 70vh;
+  width: 100vw;
+  background: url("./pics/background.jpg") no-repeat center;
+  background-size: cover;
+  background-position: top;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.top-header .container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+  text-align: center;
+  color: #fff;
+  padding: 2.5% 100px;
+  margin: 5% 0;
+  width: 100%;
+  min-height: 75%;
+  background-color: rgba(0,0,0,0.5);
+}
+.top-header .container .title {
+  font-size: 80;
+}
+.top-header .container .paragraph {
+  font-size: 40;
+}
+.top-header .container .button {
+  border-radius: 5px;
+  background-color: rgba(184,233,134,0.5);
+  padding: 10 20;
+  font-size: 30;
+}
+.top-header .container .links {
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.top-header .container .links a {
+  text-decoration: none;
+  color: inherit;
+}
+.top-header .container .links .link {
+  font-size: 30;
+  margin: 0 30;
+}
+p,
+li {
+  line-height: 150%;
+}
+.page {
+  width: 100%;
+  padding: 30px 100px;
+  box-sizing: border-box;
+}
+.page > * {
+  width: 100%;
+}
+.page .title {
+  font-size: 40px;
+  text-align: left;
+}
+.page .page-content {
+  margin: 10 20%;
+}
+.about-page > .content {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: space-around;
+          align-items: space-around;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.about-page > .content > div {
+  width: 50%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.about-page > .content .left {
+  padding-right: 5%;
+}
+.about-page > .content .right {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.label-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 10px 50px;
+}
+.label-container .label {
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 7.5px;
+  border: 1px solid #979797;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+          justify-content: center;
+  opacity: 0.25;
+}
+.label-container .label * {
+  text-align: center;
+}
+.label-container .label .title {
+  font-size: 15px;
+}
+.label-container .label .subtitle {
+  margin: 0 10;
+  font-size: 12px;
+}
+.label-container .label:hover,
+.label-container .label.selected {
+  opacity: 1;
+}
