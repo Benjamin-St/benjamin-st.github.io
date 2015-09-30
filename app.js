@@ -19888,7 +19888,16 @@ module.exports = function (locals) {
   tags.push(React.createElement("div", {
     title: "Checkout (concept)",
     subtitle: "A reusable iOS component for a simple checkout page"
-  }, React.createElement("p", {}, "So many apps have similar checkout pages. I wanted to build a generic checkout page one could easily add to an iPhone app. I modelled it after Spring's checkout drawer. It's very minimal at the moment, but maybe I'll revisit this project some day.")));
+  }, React.createElement("p", {}, "So many apps have similar checkout pages. I wanted to build a generic checkout page one could easily add to an iPhone app. I modelled it after Spring's checkout drawer. It's very minimal at the moment, but maybe I'll revisit this project some day."), React.createElement("img", {
+    src: "./pics/checkout1.jpg",
+    width: "33%"
+  }), React.createElement("img", {
+    src: "./pics/checkout2.jpg",
+    width: "33%"
+  }), React.createElement("img", {
+    src: "./pics/checkout3.jpg",
+    width: "33%"
+  })));
   if (tags.length === 1 && !Array.isArray(tags[0])) {
     return tags.pop();
   }
@@ -19921,7 +19930,10 @@ module.exports = function (locals) {
     subtitle: "Validate JS Objects/Arrays using GraphQL"
   }, React.createElement("p", {}, "I made a library that lets you use GraphQL, a language for specifying what data should look like, to validae nested JS objects and arrays."), React.createElement("a", {
     href: "https://www.npmjs.com/package/deep-type"
-  }, "Here's a link to the NPM module"), React.createElement("p", {}, "Internally, the library implements a function that generates an abstract syntax tree from a GraphQL(ish) string and a function that recursively checks if an array or object matches that abstract syntax tree.")));
+  }, "Here's a link to the NPM module"), React.createElement("p", {}, "Internally, the library implements a function that generates an abstract syntax tree from a GraphQL(ish) string and a function that recursively checks if an array or object matches that abstract syntax tree."), React.createElement("img", {
+    src: "pics/deeptype.jpg",
+    width: "100%"
+  })));
   if (tags.length === 1 && !Array.isArray(tags[0])) {
     return tags.pop();
   }
