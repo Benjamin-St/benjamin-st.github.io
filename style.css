@@ -1,6 +1,6 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700");
 body {
-  margin: 0;
+  margin: 0px;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: #4a4a4a;
@@ -152,17 +152,23 @@ li {
 .label-container .label.selected {
   opacity: 1;
 }
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 800px), screen and (max-device-width: 800px) {
   .top-header >.container {
     padding: 10px 0px;
   }
   .top-header .title {
     padding: 0px;
+    font-size: 60px !important;
+  }
+  .top-header .paragraph {
+    font-size: 22px !important;
   }
   .page-content,
   .page {
-    margin: 10px !important;
-    padding: 0px;
+    margin: 0px !important;
+  }
+  .page {
+    padding: 10px;
   }
   .about-page > .content {
     -webkit-flex-direction: column !important;
@@ -179,9 +185,9 @@ li {
     height: 0px;
   }
   .label .title {
-    font-size: 150% !important;
+    font-size: 200% !important;
   }
   .label .subtitle {
-    font-size: 100% !important;
+    font-size: 125% !important;
   }
 }
