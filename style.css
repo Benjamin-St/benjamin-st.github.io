@@ -6,7 +6,7 @@ body {
   color: #4a4a4a;
 }
 .top-header {
-  width: 100vw;
+  margin: 0 auto;
   background: url("./pics/background.jpg") no-repeat center;
   background-size: cover;
   background-position: top;
@@ -152,7 +152,10 @@ li {
 .label-container .label.selected {
   opacity: 1;
 }
-@media only screen and (max-device-width: 800px) {
+@media only screen and (max-width: 800px) {
+  .top-header >.container {
+    padding: 10px 0px;
+  }
   .top-header .title {
     padding: 0px;
   }
@@ -160,7 +163,6 @@ li {
   .page {
     margin: 10px !important;
     padding: 0px;
-    width: auto;
   }
   .about-page > .content {
     -webkit-flex-direction: column !important;
@@ -174,6 +176,7 @@ li {
   }
   .about-page > .content .right {
     visibility: hidden;
+    height: 0px;
   }
   .label .title {
     font-size: 150% !important;
