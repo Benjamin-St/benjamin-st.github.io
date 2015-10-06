@@ -6,7 +6,6 @@ body {
   color: #4a4a4a;
 }
 .top-header {
-  height: 70vh;
   width: 100vw;
   background: url("./pics/background.jpg") no-repeat center;
   background-size: cover;
@@ -32,7 +31,6 @@ body {
   padding: 2.5% 100px;
   margin: 5% 0;
   width: 100%;
-  min-height: 75%;
   background-color: rgba(0,0,0,0.5);
 }
 .top-header .container .title {
@@ -48,10 +46,14 @@ body {
   font-size: 30;
 }
 .top-header .container .links {
+  margin-top: 20px;
+  display: -webkit-flex;
+  display: flex;
   -webkit-flex-direction: row;
           flex-direction: row;
-  -webkit-justify-content: space-around;
-          justify-content: space-around;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  width: 100%;
 }
 .top-header .container .links a {
   text-decoration: none;
@@ -59,7 +61,6 @@ body {
 }
 .top-header .container .links .link {
   font-size: 30;
-  margin: 0 30;
 }
 p,
 li {
@@ -149,4 +150,34 @@ li {
 .label-container .label:hover,
 .label-container .label.selected {
   opacity: 1;
+}
+@media only screen and (max-device-width: 800px) {
+  .top-header .title {
+    padding: 0px;
+  }
+  .page-content,
+  .page {
+    margin: 10px !important;
+    padding: 0px;
+    width: auto;
+  }
+  .about-page > .content {
+    -webkit-flex-direction: column !important;
+            flex-direction: column !important;
+    margin: 0px;
+  }
+  .about-page > .content div {
+    width: auto;
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  .about-page > .content .right {
+    visibility: hidden;
+  }
+  .label .title {
+    font-size: 150% !important;
+  }
+  .label .subtitle {
+    font-size: 100% !important;
+  }
 }
