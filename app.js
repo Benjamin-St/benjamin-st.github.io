@@ -19794,6 +19794,8 @@ React.render(React.createElement(MultiPage, null, require('./jade/YoopApp')(), r
 
 React.render(React.createElement(MultiPage, null, require('./jade/Programming')(), require('./jade/WebDev')(), require('./jade/MobileDev')()), document.getElementById('SkillsPage'));
 
+ga('send', 'pageview');
+
 
 
 },{"./Page":158,"./jade/CheckoutViewController":159,"./jade/DeepType":160,"./jade/HealthExchangeAPI":161,"./jade/MobileDev":162,"./jade/Programming":163,"./jade/SongSearch":164,"./jade/WebDev":165,"./jade/YoopApp":166,"react":156}],158:[function(require,module,exports){
