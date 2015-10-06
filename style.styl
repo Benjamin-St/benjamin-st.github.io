@@ -9,8 +9,7 @@ body
 .top-header
 	height: 70vh
 	width: 100vw
-	// background: url('./background.png') no-repeat bottom; 
-	background: url('https://images.unsplash.com/photo-1441031854696-009616241b2b?q=80&fm=jpg&s=25123b201cb1593855235400214e2904') no-repeat bottom; 
+	background: url('./pics/background.jpg') no-repeat center; 
 	background-size: cover
 	background-position: top
 	
@@ -43,6 +42,12 @@ body
 		.links
 			flex-direction: row
 			justify-content: space-around
+			
+			a
+				text-decoration: none
+				color: inherit
+
+			
 			.link
 				font-size: 30
 				margin: 0 30
@@ -70,12 +75,17 @@ p, li
 	
 	> div
 		width: 50%
-		// height: auto;
 		display: flex
 		flex-direction: column
 		justify-content: center
 	.left
 		padding-right: 5%
+	.right
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+
 .label-container
 	display:flex
 	flex-direction: row
@@ -108,3 +118,5 @@ p, li
 
 		&:hover, &.selected
 			opacity: 1
+
+

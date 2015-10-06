@@ -1,3 +1,6 @@
 div(title="Checkout (concept)", subtitle = "A reusable iOS component for a simple checkout page")
 	p.
 		So many apps have similar checkout pages. I wanted to build a generic checkout page one could easily add to an iPhone app. I modelled it after Spring's checkout drawer. It's very minimal at the moment, but maybe I'll revisit this project some day.
+	img(src="./pics/checkout1.jpg", width="33%")
+	img(src="./pics/checkout2.jpg", width="33%")
+	img(src="./pics/checkout3.jpg", width="33%")

@@ -6,3 +6,5 @@ div(title = "Deep Type", subtitle = "Validate JS Objects/Arrays using GraphQL")
 
 	p.
 		Internally, the library implements a function that generates an abstract syntax tree from a GraphQL(ish) string and a function that recursively checks if an array or object matches that abstract syntax tree.
+
+	img(src="pics/deeptype.jpg", width="100%")

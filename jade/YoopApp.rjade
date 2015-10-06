@@ -1,7 +1,7 @@
 div(title="Yoop App", subtitle = "Discover and name your own price on shoes")
 	p.
-		During my internship at H.H. Brown, my team built an iOS app for discovering and naming your own price on shoes. This was my first experience working with mobile apps ever, but after two and a half months of learning and hard work, we managed to complete most of a working version 1.
+		During my internship at H.H. Brown, my team built an iOS app for discovering and naming your own price on shoes. This was my first experience working with mobile apps ever, but after two and a half months of learning and hard work, we managed to complete most of a functional version 1.
 
 	p.
-		I ended up learning about so many technologies through this experience. On the iOS specific side, I learned much about object oriented programming, dealing with asynchronous APIs, workig with ORMs, and using git and GitHub when working with a team. I also learned about using Parse SDK as a backend, using Facebook OAuth and Facebook's Graph API to get a user's email and profile picture, tracking UI events with Google Analytics, and making payments with Stripe's API.
+		I ended up learning about so many technologies through this experience. On the iOS specific side, I learned much about object oriented programming, dealing with asynchronous APIs, working with ORMs, and using git and GitHub when working with a team. I also learned about using Parse SDK as a backend, using Facebook OAuth and Facebook's Graph API to get a user's email and profile picture, tracking UI events with Google Analytics, and making payments with Stripe's API.
 
