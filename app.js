@@ -19782,23 +19782,27 @@ module.exports = warning;
 module.exports = require('./lib/React');
 
 },{"./lib/React":29}],157:[function(require,module,exports){
-var MultiPage, React, YoopApp;
+var MultiPage, React;
 
 React = require('react');
 
 MultiPage = require('./Page');
 
-YoopApp = require('./jade/YoopApp')().props;
+React.render(React.createElement(MultiPage, null, require('./jade/CourseWork/AlgorithmsImplementations')(), require('./jade/CourseWork/SongSearch')(), require('./jade/CourseWork/UniversalMachine')(), require('./jade/CourseWork/ImageCompression')(), require('./jade/CourseWork/RPNCalculator')(), require('./jade/CourseWork/Trigrams')(), require('./jade/CourseWork/UnblackEdges')()), document.getElementById('CourseworkPage'));
 
-React.render(React.createElement(MultiPage, null, require('./jade/YoopApp')(), require('./jade/DeepType')(), require('./jade/HealthExchangeAPI')(), require('./jade/SongSearch')(), require('./jade/CheckoutViewController')()), document.getElementById('ProjectsPage'));
+React.render(React.createElement(MultiPage, null, require('./jade/Web/DeepType')(), require('./jade/Web/HealthExchangeAPI')(), require('./jade/Web/DrawingArcs')()), document.getElementById('WebProjectsPage'));
 
-React.render(React.createElement(MultiPage, null, require('./jade/Programming')(), require('./jade/WebDev')(), require('./jade/MobileDev')()), document.getElementById('SkillsPage'));
+React.render(React.createElement(MultiPage, null, require('./jade/iOS/YoopApp')(), require('./jade/iOS/CheckoutViewController')()), document.getElementById('IOSProjectsPage'));
+
+React.render(React.createElement(MultiPage, null, require('./jade/Programming')(), require('./jade/WebDev')(), require('./jade/MobileDev')()), document.getElementById('TechnicalSkillsPage'));
+
+React.render(React.createElement(MultiPage, null, require('./jade/Courses/DataStructures')(), require('./jade/Courses/Comp40')(), require('./jade/Courses/Algorithms')(), require('./jade/Courses/AbstractLinearAlgebra')(), require('./jade/Courses/AbstractAlgebra')()), document.getElementById('CoursesPage'));
 
 ga('send', 'pageview');
 
 
 
-},{"./Page":158,"./jade/CheckoutViewController":159,"./jade/DeepType":160,"./jade/HealthExchangeAPI":161,"./jade/MobileDev":162,"./jade/Programming":163,"./jade/SongSearch":164,"./jade/WebDev":165,"./jade/YoopApp":166,"react":156}],158:[function(require,module,exports){
+},{"./Page":158,"./jade/CourseWork/AlgorithmsImplementations":159,"./jade/CourseWork/ImageCompression":160,"./jade/CourseWork/RPNCalculator":161,"./jade/CourseWork/SongSearch":162,"./jade/CourseWork/Trigrams":163,"./jade/CourseWork/UnblackEdges":164,"./jade/CourseWork/UniversalMachine":165,"./jade/Courses/AbstractAlgebra":166,"./jade/Courses/AbstractLinearAlgebra":167,"./jade/Courses/Algorithms":168,"./jade/Courses/Comp40":169,"./jade/Courses/DataStructures":170,"./jade/MobileDev":171,"./jade/Programming":172,"./jade/Web/DeepType":173,"./jade/Web/DrawingArcs":174,"./jade/Web/HealthExchangeAPI":175,"./jade/WebDev":176,"./jade/iOS/CheckoutViewController":177,"./jade/iOS/YoopApp":178,"react":156}],158:[function(require,module,exports){
 var Label, MultiPage, React;
 
 React = require('react');
@@ -19888,18 +19892,10 @@ var React = require('react');
 module.exports = function (locals) {
   var tags = [];
   tags.push(React.createElement("div", {
-    title: "Checkout (concept)",
-    subtitle: "A reusable iOS component for a simple checkout page"
-  }, React.createElement("p", {}, "So many apps have similar checkout pages. I wanted to build a generic checkout page one could easily add to an iPhone app. I modelled it after Spring's checkout drawer. It's very minimal at the moment, but maybe I'll revisit this project some day."), React.createElement("img", {
-    src: "./pics/checkout1.jpg",
-    width: "33%"
-  }), React.createElement("img", {
-    src: "./pics/checkout2.jpg",
-    width: "33%"
-  }), React.createElement("img", {
-    src: "./pics/checkout3.jpg",
-    width: "33%"
-  })));
+    title: "Algorithms Implentations"
+  }, React.createElement("p", {}, "Because my algorithms class was primarily theory based, I wanted to get my hands dirty and get comfortable implementing some of the data structures and algorithms we learned throughout the course. I wrote some in C, some in C++, and some in Python (depending on how lazy I was feeling that day)"), React.createElement("a", {
+    href: "https://github.com/bsteephenson/Algorithms"
+  }, "The Github Repo")));
   if (tags.length === 1 && !Array.isArray(tags[0])) {
     return tags.pop();
   }
@@ -19924,6 +19920,408 @@ module.exports.locals = function setLocals(locals) {
   return newRender;
 };
 },{"react":156}],160:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Image Compression"
+  }, React.createElement("p", {}, "Wrote a pnm image compressor which halved the size of the image with about 3% error. This was the fourth project in Comp 40 intended to teach us about bit packing and about managing complexity. This was probably one of the most complex programs I've ever written simply because of the sheer number of operations needed to be done to each 2x2 block of pixels. As the compressed image format needed to be bit packed, I also wrote a bitpack module for reading and writing ranges of bits in 64-bit words. Another aspect that made this project difficult was the subtleties in bit shifting signed vs unsigned integers on Intel machines. ")));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],161:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "RPN Calculator",
+    subtitle: "A reverse polish notation calculator written in assembly"
+  }, React.createElement("p", {}, "After writing our universal machine hardware emulator, we wrote a program for it using an assembler language called UMASM. We implemented a stack based reverse Polish notation calculator. The unstrict environment as well as the small number of registers made managing complexity in this project and interesting goal. We were ultimately able to write sane code by developing calling conventions used throughout the program. ")));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],162:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Song Search",
+    subtitle: "A lyrics search engine"
+  }, React.createElement("p", {}, "SongSearch is a search engine for song lyrics which I build for my Data Structures final project.", "The program finds the top ten songs in a given database of songs which contain a certain search term.", "Internally, the program uses a trie and dynamic arrays to quickly laod and search this database."), React.createElement("p", {}, "Part of what made building this project enjoyable for me was breaking down the larger problem into smaller components which I could independently test. At the end of that day, I had an efficient, reliable, and well organized codebase (which makes me happy)."), React.createElement("img", {
+    src: "pics/songsearch.jpg",
+    width: "100%"
+  })));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],163:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Trigrams",
+    subtitle: "Predict the language of a document"
+  }, React.createElement("p", {}, "Given documents of specific languages, can you figure out the language of an unlabeled document? This was the final project of the intro CS class I was TAing, so I wanted to take a stab at the problem. The program takes trigram (consecutive three letter chunks) of the labeled documents and generates a vector from the frequencies of each trigram. When encountering a document of unknown language, just generate a frequency vector and using cosine similarity to see how close the document matches the language."), React.createElement("p", {}, "While this project wasn't the most difficult, I found the idea of cosine similarity somewhat amazing. Taking Calc 3 at the the time, I understood the intuition of taking this dot product and came to see that machine learning isn't \"magic\" after all! Such a small realization made we want to pursue machine learning a little further by taking Intro to Machine Learning in the spring. ")));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],164:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Unblack Edges"
+  }, React.createElement("p", {}, "Define a black edge as either a black pixel on the edge of a picture or a black pixel adjacent to another black pixel. This programs removes all black edges from a PPM image. Implemented in C")));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],165:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Universal Machine",
+    subtitle: "A hardware emulator that runs bitpacked instructions"
+  }, React.createElement("p", {}, "My partner and I built a hardware emulator that read in bit packed instructions and executed them. We also implemented a module to manage segmented memory. This UM took in 14 different instructions and was Turing complete"), React.createElement("p", {}, "After, we used the kcachegrind profiling tool to optimize our UM. In a couple days, we manage to get a benchmark to go from taking three minutes down to taking ten seconds (all at the expense of more unsafe code). We ultimately came to the point where hardware bit shifting became the bottle neck of our program ")));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],166:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Math 145",
+    subtitle: "Abstract Algebra"
+  }, React.createElement("p", {}, "Groups, fields, rings. Although this isn't the most practical course I've taken, this class taught me the importance of breaking down problems into mathematical objects which are easier to study. This kind of thinking greatly helped when picking apart some data structures in the algorithms class I was also taking at the time. ")));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],167:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Math 72",
+    subtitle: "Abstract Linear Algebra"
+  }, React.createElement("p", {}, "Abstract linear algebra was an introduction to vector spaces, matrices, and linear transformations. The course also served as an introduction to proof based math for me. I left the course with a strong grasp of what matrices represent and the variety of ways they can be useful in computation. ")));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],168:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Comp 160",
+    subtitle: "Intro to Algorithms"
+  }, React.createElement("p", {}, "Algorithms. I learned techniques like asymptotic complexity analysis, amortized analysis, divide and conquer, greedy algorithms, and dynamic programming. Some topics covered include rank selection, quick sort, heaps, red black trees, interval trees, longest common subsequence, breadth first search, depth first search, topological sorting, identifying strongly connected components, minimum spanning tree algorithms, single source shortest path algorithms, NP-completeness, and hashing."), React.createElement("p", {}, "This was the first CS class I really struggled with. While I understood the basics, it took practice to be able to extend the plain old algorithms for more complex homeworks and exam problems."), React.createElement("p", {}, "This class also gave me a reason to open up CLRS. I love the way the book builds up knowledge incrementally through theorems and lemmas. Reading this book made me confident that I wanted to pursue math and CS. ")));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],169:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Comp 40",
+    subtitle: "Machine Architecture and Assembly Programming"
+  }, React.createElement("p", {}, "Comp 40 is the project based cs course on computer architecture and assembly programming. Topics include creating abstractions in C, locality and caching, bit packing and bit manipulation, x86 assembly, hardware emulators, and programming in a simpler assembler language."), React.createElement("p", {}, "All the projects were done via pair programming. It was a great chance to get comfy working with other developers! The course also required submitting design docs and extensive documentation of architecture and invariants. "), React.createElement("p", {}, "Here's some things I learned how to do in this class:"), React.createElement("ul", {}, React.createElement("li", {}, 'Implementing "classes" in C using void pointers and hidden structure'), React.createElement("li", {}, "Using method suites to achieve polymorphism in C"), React.createElement("li", {}, "Predicting how well code will perform with caching"), React.createElement("li", {}, "Creating a bit packer to compactly store information at the bit level"), React.createElement("li", {}, "Reading and comprehending flow in x86 assembler"), React.createElement("li", {}, "Understanding x86 calling conventions"), React.createElement("li", {}, "Implementing segmented memory for a hardware emulator"), React.createElement("li", {}, "Profiling and optimizing a hardware emulator to make the program run as fast as possible"), React.createElement("li", {}, "Developing abstractions and calling conventions in a simpler assembler language called UMASM (universal machine assembler)"))));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],170:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Comp 15",
+    subtitle: "Data Structures"
+  }, React.createElement("p", {}, "Data structures. Topics covered included: dynamic arrays, linked lists, binary search trees, heaps, sorting, graphs, hash tables, tries, stacks, queues, bloom filters, and general memory management in C++.")));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],171:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "iOS Development"
+  }, React.createElement("p", {}, "This summer I learned the fundementals of making an iOS app. "), React.createElement("ul", {}, React.createElement("li", {}, "Objective C / iOS", React.createElement("ul", {}, React.createElement("li", {}, "Delegate pattern for enhancing separation of concerns"), React.createElement("li", {}, "Dealing with asynchronous APIs such as Core Location, NSURLSession, and Core Animation"), React.createElement("li", {}, "Persisting data through Core Data"))), React.createElement("li", {}, "Third Party Libraries", React.createElement("ul", {}, React.createElement("li", {}, "Facebook OAuth and Graph API"), React.createElement("li", {}, "Stripe and Apple Pay payments"), React.createElement("li", {}, "Google Analytics"), React.createElement("li", {}, "Parse SDK"))))));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],172:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Software Development (general)"
+  }, React.createElement("p", {}, "Rather than focusing on too much deeply learning specific technologies, I value understanding fundemental concepts that carry over across different domains. I like seeing the types of patterns different programming languages encourage or discourage and how that manifests into architecture."), React.createElement("p", {}, "Here's a list of things I have experience with."), React.createElement("ul", {}, React.createElement("li", {}, "C/C++", React.createElement("ul", {}, React.createElement("li", {}, "Pointers and dynamic allocation"), React.createElement("li", {}, "Memory management without a Garbage Collector"))), React.createElement("li", {}, "JavaScript/CoffeeScript", React.createElement("ul", {}, React.createElement("li", {}, "Core functional programming concepts such as composition, currying, higher order functions, map, filter, reduce, closures"))), React.createElement("li", {}, "Java and Objective-C", React.createElement("ul", {}, React.createElement("li", {}, "Object Oriented Programming principles such as encapsulation, inheritance, and polymorphism"))), React.createElement("li", {}, "(a little) Haskell", React.createElement("ul", {}, React.createElement("li", {}, "Functional purity, using the IO Monad"), React.createElement("li", {}, "Pattern matching, thinking in terms of recursion and expressions"))))));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],173:[function(require,module,exports){
 var React = require('react');
 module.exports = function (locals) {
   var tags = [];
@@ -19959,7 +20357,39 @@ module.exports.locals = function setLocals(locals) {
   newRender.locals = setLocals;
   return newRender;
 };
-},{"react":156}],161:[function(require,module,exports){
+},{"react":156}],174:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Drawing Arcs"
+  }, React.createElement("p", {}, "My idea was to make a program that given a curve, you could just add points to extend that curve. The program would find the arc that goes to your point while staying smooth to the previous curve. Didn't turn out to be super useful, but it was a fun thought experiment. I ended up having to use some vector algebra to find the right arc, making this a fun little geometry problem. I also got a chance to use paper.js for drawing."), React.createElement("a", {
+    href: "http://bsteephenson.github.io/Drawing-Arcs/"
+  }, "Try it out!")));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],175:[function(require,module,exports){
 var React = require('react');
 module.exports = function (locals) {
   var tags = [];
@@ -19990,101 +20420,7 @@ module.exports.locals = function setLocals(locals) {
   newRender.locals = setLocals;
   return newRender;
 };
-},{"react":156}],162:[function(require,module,exports){
-var React = require('react');
-module.exports = function (locals) {
-  var tags = [];
-  tags.push(React.createElement("div", {
-    title: "iOS Development"
-  }, React.createElement("p", {}, "This summer I learned the fundementals of making an iOS app. "), React.createElement("ul", {}, React.createElement("li", {}, "Objective C / iOS", React.createElement("ul", {}, React.createElement("li", {}, "Delegate pattern for enhancing separation of concerns"), React.createElement("li", {}, "Dealing with asynchronous APIs such as Core Location, NSURLSession, and Core Animation"), React.createElement("li", {}, "Persisting data through Core Data"))), React.createElement("li", {}, "Third Party Libraries", React.createElement("ul", {}, React.createElement("li", {}, "Facebook OAuth and Graph API"), React.createElement("li", {}, "Stripe and Apple Pay payments"), React.createElement("li", {}, "Google Analytics"), React.createElement("li", {}, "Parse SDK"))))));
-  if (tags.length === 1 && !Array.isArray(tags[0])) {
-    return tags.pop();
-  }
-  tags.unshift("div", null);
-  return React.createElement.apply(React, tags);
-};
-module.exports.locals = function setLocals(locals) {
-  var render = this;
-  function newRender(additionalLocals) {
-    var newLocals = {};
-    for (var key in locals) {
-      newLocals[key] = locals[key];
-    }
-    if (additionalLocals) {
-      for (var key in additionalLocals) {
-        newLocals[key] = additionalLocals[key];
-      }
-    }
-    return render.call(this, newLocals);
-  }
-  newRender.locals = setLocals;
-  return newRender;
-};
-},{"react":156}],163:[function(require,module,exports){
-var React = require('react');
-module.exports = function (locals) {
-  var tags = [];
-  tags.push(React.createElement("div", {
-    title: "Software Development (general)"
-  }, React.createElement("p", {}, "Rather than focusing on too much deeply learning specific technologies, I value understanding fundemental concepts that carry over across different domains. I like seeing the types of patterns different programming languages encourage or discourage and how that manifests into architecture."), React.createElement("p", {}, "Here's a list of things I have experience with."), React.createElement("ul", {}, React.createElement("li", {}, "C/C++", React.createElement("ul", {}, React.createElement("li", {}, "Pointers and dynamic allocation"), React.createElement("li", {}, "Memory management without a Garbage Collector"))), React.createElement("li", {}, "JavaScript/CoffeeScript", React.createElement("ul", {}, React.createElement("li", {}, "Core functional programming concepts such as composition, currying, higher order functions, map, filter, reduce, closures"))), React.createElement("li", {}, "Java and Objective-C", React.createElement("ul", {}, React.createElement("li", {}, "Object Oriented Programming principles such as encapsulation, inheritance, and polymorphism"))), React.createElement("li", {}, "(a little) Haskell", React.createElement("ul", {}, React.createElement("li", {}, "Functional purity, using the IO Monad"), React.createElement("li", {}, "Pattern matching, thinking in terms of recursion and expressions"))))));
-  if (tags.length === 1 && !Array.isArray(tags[0])) {
-    return tags.pop();
-  }
-  tags.unshift("div", null);
-  return React.createElement.apply(React, tags);
-};
-module.exports.locals = function setLocals(locals) {
-  var render = this;
-  function newRender(additionalLocals) {
-    var newLocals = {};
-    for (var key in locals) {
-      newLocals[key] = locals[key];
-    }
-    if (additionalLocals) {
-      for (var key in additionalLocals) {
-        newLocals[key] = additionalLocals[key];
-      }
-    }
-    return render.call(this, newLocals);
-  }
-  newRender.locals = setLocals;
-  return newRender;
-};
-},{"react":156}],164:[function(require,module,exports){
-var React = require('react');
-module.exports = function (locals) {
-  var tags = [];
-  tags.push(React.createElement("div", {
-    title: "Song Search",
-    subtitle: "A lyrics search engine"
-  }, React.createElement("p", {}, "SongSearch is a search engine for song lyrics which I build for my Data Structures final project.", "The program finds the top ten songs in a given database of songs which contain a certain search term.", "Internally, the program uses a trie and dynamic arrays to quickly laod and search this database."), React.createElement("p", {}, "Part of what made building this project enjoyable for me was breaking down the larger problem into smaller components which I could independently test. At the end of that day, I had an efficient, reliable, and well organized codebase (which makes me happy)."), React.createElement("img", {
-    src: "pics/songsearch.jpg",
-    width: "100%"
-  })));
-  if (tags.length === 1 && !Array.isArray(tags[0])) {
-    return tags.pop();
-  }
-  tags.unshift("div", null);
-  return React.createElement.apply(React, tags);
-};
-module.exports.locals = function setLocals(locals) {
-  var render = this;
-  function newRender(additionalLocals) {
-    var newLocals = {};
-    for (var key in locals) {
-      newLocals[key] = locals[key];
-    }
-    if (additionalLocals) {
-      for (var key in additionalLocals) {
-        newLocals[key] = additionalLocals[key];
-      }
-    }
-    return render.call(this, newLocals);
-  }
-  newRender.locals = setLocals;
-  return newRender;
-};
-},{"react":156}],165:[function(require,module,exports){
+},{"react":156}],176:[function(require,module,exports){
 var React = require('react');
 module.exports = function (locals) {
   var tags = [];
@@ -20115,7 +20451,47 @@ module.exports.locals = function setLocals(locals) {
   newRender.locals = setLocals;
   return newRender;
 };
-},{"react":156}],166:[function(require,module,exports){
+},{"react":156}],177:[function(require,module,exports){
+var React = require('react');
+module.exports = function (locals) {
+  var tags = [];
+  tags.push(React.createElement("div", {
+    title: "Checkout (concept)",
+    subtitle: "A reusable iOS component for a simple checkout page"
+  }, React.createElement("p", {}, "So many apps have similar checkout pages. I wanted to build a generic checkout page one could easily add to an iPhone app. I modelled it after Spring's checkout drawer. It's very minimal at the moment, but maybe I'll revisit this project some day."), React.createElement("img", {
+    src: "./pics/checkout1.jpg",
+    width: "33%"
+  }), React.createElement("img", {
+    src: "./pics/checkout2.jpg",
+    width: "33%"
+  }), React.createElement("img", {
+    src: "./pics/checkout3.jpg",
+    width: "33%"
+  })));
+  if (tags.length === 1 && !Array.isArray(tags[0])) {
+    return tags.pop();
+  }
+  tags.unshift("div", null);
+  return React.createElement.apply(React, tags);
+};
+module.exports.locals = function setLocals(locals) {
+  var render = this;
+  function newRender(additionalLocals) {
+    var newLocals = {};
+    for (var key in locals) {
+      newLocals[key] = locals[key];
+    }
+    if (additionalLocals) {
+      for (var key in additionalLocals) {
+        newLocals[key] = additionalLocals[key];
+      }
+    }
+    return render.call(this, newLocals);
+  }
+  newRender.locals = setLocals;
+  return newRender;
+};
+},{"react":156}],178:[function(require,module,exports){
 var React = require('react');
 module.exports = function (locals) {
   var tags = [];
