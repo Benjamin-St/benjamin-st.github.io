@@ -1,0 +1,3 @@
+div(title="Drawing Arcs")
+	p My idea was to make a program that given a curve, you could just add points to extend that curve. The program would find the arc that goes to your point while staying smooth to the previous curve. Didn't turn out to be super useful, but it was a fun thought experiment. I ended up having to use some vector algebra to find the right arc, making this a fun little geometry problem. I also got a chance to use paper.js for drawing.
+	a(href="http://bsteephenson.github.io/Drawing-Arcs/") Try it out!

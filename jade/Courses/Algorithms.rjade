@@ -1,0 +1,4 @@
+div(title="Comp 160", subtitle = "Intro to Algorithms")
+	p Algorithms. I learned techniques like asymptotic complexity analysis, amortized analysis, divide and conquer, greedy algorithms, and dynamic programming. Some topics covered include rank selection, quick sort, heaps, red black trees, interval trees, longest common subsequence, breadth first search, depth first search, topological sorting, identifying strongly connected components, minimum spanning tree algorithms, single source shortest path algorithms, NP-completeness, and hashing.
+	p This was the first CS class I really struggled with. While I understood the basics, it took practice to be able to extend the plain old algorithms for more complex homeworks and exam problems.
+	p This class also gave me a reason to open up CLRS. I love the way the book builds up knowledge incrementally through theorems and lemmas. Reading this book made me confident that I wanted to pursue math and CS. 

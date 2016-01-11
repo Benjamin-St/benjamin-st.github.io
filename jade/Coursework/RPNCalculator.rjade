@@ -1,0 +1,2 @@
+div(title="RPN Calculator", subtitle = "A reverse polish notation calculator written in assembly")
+	p After writing our universal machine hardware emulator, we wrote a program for it using an assembler language called UMASM. We implemented a stack based reverse Polish notation calculator. The unstrict environment as well as the small number of registers made managing complexity in this project and interesting goal. We were ultimately able to write sane code by developing calling conventions used throughout the program. 

@@ -1,14 +1,21 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 
 body
-	margin: 0
+	// position: fixed
+	// left:0px
+	// right:0px
+	// top:0px
+	// bottom: 0px
+	// overflow-y:scroll
+	//width: 100vw
+	margin: 0px
 	font-family: 'Lato', sans-serif
 	font-weight: 300
 	color: #4A4A4A
 
 .top-header
-	height: 70vh
-	width: 100vw
+	// height: 70vh
+	width: 100%
 	background: url('./pics/background.jpg') no-repeat center; 
 	background-size: cover
 	background-position: top
@@ -27,7 +34,7 @@ body
 		padding: 2.5% 100px
 		margin: 5% 0
 		width: 100%
-		min-height: 75%
+		// min-height: 75%
 		background-color: alpha(black, .5)
 
 		.title
@@ -40,8 +47,11 @@ body
 			padding: 10 20
 			font-size: 30
 		.links
+			margin-top: 20px
+			display: flex
 			flex-direction: row
-			justify-content: space-around
+			justify-content: space-between
+			width: 100%
 			
 			a
 				text-decoration: none
@@ -50,7 +60,7 @@ body
 			
 			.link
 				font-size: 30
-				margin: 0 30
+				// margin: 0 30
 p, li
 	line-height: 150%
 .page
@@ -103,6 +113,8 @@ p, li
 		display:flex
 		flex-direction:column
 		justify-content: center
+		
+		cursor: pointer
 
 		opacity: .25
 
@@ -119,4 +131,35 @@ p, li
 		&:hover, &.selected
 			opacity: 1
 
+@media screen and (max-width: 800px), screen and (max-device-width: 800px)
 
+	.top-header
+		>.container
+			padding: 10px 0px
+		.title
+			padding: 0px
+			font-size: 60px !important
+		.paragraph
+			font-size: 22px !important
+	.page-content, .page
+		margin: 0px !important
+	
+	.page
+		padding: 10px
+		
+	.about-page > .content
+		flex-direction: column !important
+		margin: 0px
+		div
+			width: auto
+			margin: 0px !important
+			padding: 0px !important
+		.right
+			visibility: hidden
+			height: 0px
+	.label
+		.title
+			font-size: 200% !important
+		.subtitle
+			font-size: 125% !important
+			

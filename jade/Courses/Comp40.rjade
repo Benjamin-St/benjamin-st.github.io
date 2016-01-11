@@ -1,0 +1,16 @@
+div(title="Comp 40", subtitle = "Machine Architecture and Assembly Programming")
+	p.
+		Comp 40 is the project based cs course on computer architecture and assembly programming. Topics include creating abstractions in C, locality and caching, bit packing and bit manipulation, x86 assembly, hardware emulators, and programming in a simpler assembler language.
+	p.
+		All the projects were done via pair programming. It was a great chance to get comfy working with other developers! The course also required submitting design docs and extensive documentation of architecture and invariants. 
+	p Here's some things I learned how to do in this class:
+	ul
+		li Implementing "classes" in C using void pointers and hidden structure
+		li Using method suites to achieve polymorphism in C
+		li Predicting how well code will perform with caching
+		li Creating a bit packer to compactly store information at the bit level
+		li Reading and comprehending flow in x86 assembler
+		li Understanding x86 calling conventions
+		li Implementing segmented memory for a hardware emulator
+		li Profiling and optimizing a hardware emulator to make the program run as fast as possible
+		li Developing abstractions and calling conventions in a simpler assembler language called UMASM (universal machine assembler)

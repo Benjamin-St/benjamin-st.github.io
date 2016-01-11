@@ -1,7 +1,9 @@
 div(title="Yoop App", subtitle = "Discover and name your own price on shoes")
 	p.
 		During my internship at H.H. Brown, my team built an iOS app for discovering and naming your own price on shoes. This was my first experience working with mobile apps ever, but after two and a half months of learning and hard work, we managed to complete most of a functional version 1.
-
+	p.
+		The idea is you take a personality quiz, and you get 12 new shoes suggested to you each day. You then like or dislike those shoes in your queue. You can then bid on shoes that you liked, and you'll later find out if you won the bid. If you won, you can buy the shoes right from the app.
 	p.
 		I ended up learning about so many technologies through this experience. On the iOS specific side, I learned much about object oriented programming, dealing with asynchronous APIs, working with ORMs, and using git and GitHub when working with a team. I also learned about using Parse SDK as a backend, using Facebook OAuth and Facebook's Graph API to get a user's email and profile picture, tracking UI events with Google Analytics, and making payments with Stripe's API.
-
+	p
+		a(href="./pics/yoopvideo.mov") Here's a long 3 minute (64mb) video of me using the app.

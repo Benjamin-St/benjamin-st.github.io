@@ -1,0 +1,3 @@
+div(title="Universal Machine", subtitle = "A hardware emulator that runs bitpacked instructions")
+	p My partner and I built a hardware emulator that read in bit packed instructions and executed them. We also implemented a module to manage segmented memory. This UM took in 14 different instructions and was Turing complete
+	p After, we used the kcachegrind profiling tool to optimize our UM. In a couple days, we manage to get a benchmark to go from taking three minutes down to taking ten seconds (all at the expense of more unsafe code). We ultimately came to the point where hardware bit shifting became the bottle neck of our program 
