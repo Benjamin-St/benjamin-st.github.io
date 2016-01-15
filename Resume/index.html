@@ -86,11 +86,10 @@
         width: 80%;
         margin-top: 3px;
       }
-
-/*      p.description{
-        width: 80%;
+      .project > .description {
+        width: 100%;
       }
-*/
+
       p.aboutmedescription{
         font-size: 11px;
         margin-left: 25px;
@@ -141,18 +140,9 @@
         <div class="experience">
           <div class = "title work">Tufts University</div><div class = "times">Expected May 2018</div>
           <p class = "description">School of Arts and Science - Computer Science and Mathematics</p>
-          <p class = "description">Current GPA: 3.70</p>
-          <p class = "description">Coursework: Data Structures, Discrete Math, Abstract Linear Algebra, Machine Structure and Assembly Language Programming (current), Algorithms (current), Calculus III (current), Abstract Algebra I (current)</p>
+          <p class = "description">Current GPA: 3.77</p>
+          <p class = "description">Coursework: Data Structures, Algorithms, Machine Structure and Assembly Language Programming,  Abstract Linear Algebra, Programming Languages (current), Theory of Computation (current), Machine Learning (current)</p>
         </div>
-
-        <div class="experience">
-          <div class = "title work">Bergen County Academies</div><div class = "times">June 2014</div>
-          <p class = "description">Academy for the Advancement of Science and Technology</p>
-          <p class = "description">GPA: 3.84</p>
-          <p class = "description">AP Computer Science, Digital Imaging, AP Statistics, Linear Algebra and Differential Equations</p>
-        </div>
-      </div>
-
       <hr />
     
       <div>
@@ -160,16 +150,14 @@
         
         <div class="experience">
           <div class = "title work">Teaching Assistant at Tufts University</div><div class = "times">Jan 2015 - Present</div>
-          <p class = "description">Assists students at office hours and grades assignments for Data Structures (Spring 2015) and Introduction to Computer Science (current)</p>
+          <p class = "description">Assists students at office hours and grades assignments for Data Structures (Spring 2015) and Introduction to Computer Science (Fall 2015 to Present)</p>
         </div>
         
         <div class="experience">
           <div class = "title work">Software Development Intern at H.H.Brown Shoe Company</div>
           <div class = "times">May 2015 - July 2015</div>
-          <p class = "description">Created an iPhone app called Yoop which suggests products to users and lets users name their own price on shoes.</p>
-          <p class = "description">Built the app using tools such as Objective-C, XCode, Parse SDK, and Core Data</p>
-          <p class = "description">Integrated the app with APIs to deal with making payments with Stripe, getting profile information using Facebook Graph API, and tracking user interactions with Google Analytics.</p>
-          <p class = "description">Learned much about working in a team, embracing source control, and managing project benchmarks.</p>
+          <p class = "description">Worked in a team to create an iPhone app called Yoop</p>
+          <p class = "description">Learned much about collaboration, embracing source control, writing test cases, and managing project benchmarks.</p>
         </div>
 
 
@@ -186,28 +174,46 @@
 
       <div>
         <h2>Projects</h2>
+        
+        <div class="experience project">
+          <div class = "title project">Yoop App</div>
+          <p class = "description">Created an iPhone app which suggests products to users and lets users name their own price on shoes.</p>
+          <p class = "description">Used Objective-C, XCode, Parse SDK, Core Data, Stripe payments API, Facebook Graph API, and Google Analytics</p>
+        </div>
 
-        <div class="experience">
+        <div class="experience project">
+          <div class = "title project">Universal Machine Hardware Emulator</div>
+          <p class = "description">Wrote a hardware emulator in C that interprets 14 bitpacked instructions and uses segmented memory</p>
+          <p class = "description">Profiled this program to improve performance, decreasing the runtime of a benchmark from 2 minutes down to 10 seconds</p>
+        </div>
+
+        <div class="experience project">
+          <div class = "title project">Trigrams Document Language Classifier</div>
+          <p class = "description">Built a classifier in C++ that uses the frequencies of three letter chunks in a document to determine its language</p>
+          <p class = "description">Used techniques such as string parsing, cosine similarity, and quick sort to sort similarity scores</p>
+        </div>
+
+        <div class="experience project">
+          <div class = "title project">Deep Type</div>
+          <p class = "description">Created a JavaScript library for validating objects and arrays using a GraphQL-like syntax</p>
+        </div>
+
+
+        <div class="experience project">
           <div class = "title project">TuftsLife</div>
-          <div class = "times">April 2015 - Present</div>
           <p class = "description">Working in a team to create a web app with which students can find and create events, groups, and listings.</p>
           <p class = "description">Built with Node.js, Sails framework, Backbone, jQuery, and Boostrap.</p>
 
         </div>
 
-        <div class="experience">
-          <div class = "title project">Deep Type</div>
-          <div class = "times">August 2015</div>
-          <p class = "description">Created a JavaScript library for validating objects and arrays using a GraphQL-like syntax</p>
-        </div>
-
-
-        <div class="experience">
+        <div class="experience project">
           <div class = "title project">SongSearch Lyrics Search Engine</div>
-          <div class = "times">December 2014</div>
           <p class = "description">Built a search engine for the lyrics of 170,000 songs in C++ for a data structures class</p>
           <p class = "description">Implemented with a trie and put together using independently tested classes</p>
         </div>
+
+
+
       </div>
 
       <hr />
@@ -219,7 +225,7 @@
             <li>Most familiar with C, C++, JavaScript, Java, and Python</li>
             <li>Values organization through version control, unit testing, object oriented programming, and functional programming</li>
             <li>Web Development: HTML, CSS, JavaScript, CoffeeScript, React.js, Backbone, jQuery, Stylus, Jade, Node.js, Express, Sails</li>
-            <li>Mobile App Development: Objective-C, XCode, Core Data, Parse SDK</li>
+            <li>Mobile App Development: Objective-C, XCode, Core Data, Parse iOS SDK</li>
           </ul>
         </div>
       </div>
