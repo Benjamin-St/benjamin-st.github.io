@@ -1,3 +1,0 @@
-div(title = "Math 145", subtitle="Abstract Algebra")
-	p.
-		Groups, fields, rings. Although this isn't the most practical course I've taken, this class taught me the importance of breaking down problems into mathematical objects which are easier to study. This kind of thinking greatly helped when picking apart some data structures in the algorithms class I was also taking at the time. 

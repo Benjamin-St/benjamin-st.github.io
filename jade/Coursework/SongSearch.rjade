@@ -1,8 +1,0 @@
-div(title="Song Search", subtitle = "A lyrics search engine")
-	p.
-		SongSearch is a search engine for song lyrics which I build for my Data Structures final project.
-		The program finds the top ten songs in a given database of songs which contain a certain search term.
-		Internally, the program uses a trie and dynamic arrays to quickly laod and search this database.
-	p.
-		Part of what made building this project enjoyable for me was breaking down the larger problem into smaller components which I could independently test. At the end of that day, I had an efficient, reliable, and well organized codebase (which makes me happy).
-	img(src="pics/songsearch.jpg", width="100%")

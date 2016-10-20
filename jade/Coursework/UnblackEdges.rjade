@@ -1,2 +1,0 @@
-div(title="Unblack Edges")
-	p Define a black edge as either a black pixel on the edge of a picture or a black pixel adjacent to another black pixel. This programs removes all black edges from a PPM image. Implemented in C

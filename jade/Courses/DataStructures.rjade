@@ -1,3 +1,0 @@
-div(title="Comp 15", subtitle = "Data Structures")
-	p.
-		Data structures. Topics covered included: dynamic arrays, linked lists, binary search trees, heaps, sorting, graphs, hash tables, tries, stacks, queues, bloom filters, and general memory management in C++.

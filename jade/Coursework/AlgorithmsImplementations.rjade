@@ -1,3 +1,0 @@
-div(title="Algorithms Implentations")
-	p Because my algorithms class was primarily theory based, I wanted to get my hands dirty and get comfortable implementing some of the data structures and algorithms we learned throughout the course. I wrote some in C, some in C++, and some in Python (depending on how lazy I was feeling that day)
-	a(href = "https://github.com/bsteephenson/Algorithms") The Github Repo

@@ -1,6 +1,0 @@
-div(title="Health Insurance Exchange API", subtitle = "An API for getting information about insurance providers")
-	
-	p For a final project in the class "Health Policy and the Open Data Revolution," I built an API which provided clients information about health insurance options. The data came from the Health Insurance Exchange open data set, and the API exposed an endpoint for listing insurance providers given a zipcode and getting more details about a provider. This API was part of a larger project which helped users find the insurance provider for them.
-
-	p Through this project, I learned about setting up a Ruby on Rails project, seeding a database using this framework, configuring a postgres database, and deploying a project to Heroku.
-
