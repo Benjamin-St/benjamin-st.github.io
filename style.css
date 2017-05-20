@@ -1,6 +1,7 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa");
 body {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', sans-serif;
   font-weight: 400;
   display: -webkit-flex;
   display: flex;
@@ -11,4 +12,18 @@ body {
   font-size: 21px;
   color: #808080;
   margin: 100px;
+}
+.stuff {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.stuff a {
+  text-decoration: none;
+}
+.stuff div {
+  margin: 20;
 }
