@@ -9,7 +9,7 @@ body {
           justify-content: center;
   -webkit-flex-direction: column;
           flex-direction: column;
-  font-size: 21px;
+  font-size: 16.8px;
   color: #808080;
   margin: 25;
 }
@@ -25,5 +25,5 @@ body {
   text-decoration: none;
 }
 .stuff div {
-  margin: 20 20 20 0;
+  margin: 20 40 20 0;
 }
