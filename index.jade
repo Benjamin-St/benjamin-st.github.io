@@ -1,60 +1,70 @@
 
 html
-	head
-		link(rel='stylesheet' type='text/css' href='style.css')
-		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
-		link(href="https://fonts.googleapis.com/css?family=Comfortaa", rel="stylesheet")
+    head
+        link(rel='stylesheet' type='text/css' href='style.css')
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
+        link(href="https://fonts.googleapis.com/css?family=Comfortaa", rel="stylesheet")
 
-		title benjamin steephenson
-		//- meta(name="viewport" content="width=600, initial-scale=1")
-	body
-		p hi, my name is ben!
-		p here are a few of my favorite things (in no particular order) :
-		br
-		div.stuff
-			div computer science
-			div mathemagics
-			div #[a(href="https://www.goodreads.com/user/show/5836895-benjamin") reading]
-			div being christian
-			div using probability + linear algebra + calculus for great good
-			div web development
-			div gospel choir
-			div systems programming
-			div adventuring
-			div cardio
-			div twitter for being angsty
-			div #[a(href="https://github.com/bsteephenson/") writing code]
-			div writing my heart out
-			div public transportation
-			div proofs
-			div snapchat stories
-			div recursion
-			div making and eating breakfast
-			div talking to strangers
-			div sincerity
-			div #[a(href="https://open.spotify.com/user/1281321896?si=CCd4i2oyQSmavNQ1vLLL0Q") moody music]
-			div armchair psychology
-			div concurrency
-			div not having a plan
-			div pretending to know how to play piano + guitar
-			div coffee + tea
-			div being a human bean
-			div airplane mode
-			div #[a(href="https://bsteephenson.github.io") pretending to have a personality]
-			div a biweekly existential crisis
-			div calling random places "home"
-			div oversharing on the internet and regretting it later
-			div serendipity
-			div naps
-		br
-		br
-		p benjaminsteephenson [at] gmail.com
+        title benjamin steephenson
+        //- meta(name="viewport" content="width=600, initial-scale=1")
+    body
+        p hi, my name is ben!
+        p here are a few of my favorite things (in no particular order) :
+        br
+        div.stuff
+            div computer science
+            div mathemagics
+            div #[a(href="https://www.goodreads.com/user/show/5836895-benjamin") reading]
+            div being christian
+            div using probability + linear algebra + calculus for great good
+            div web development
+            div gospel choir
+            div systems programming
+            div adventuring
+            div cardio
+            div twitter for being angsty
+            div #[a(href="https://github.com/bsteephenson/") writing code]
+            div writing my heart out
+            div public transportation
+            div proofs
+            div snapchat stories
+            div recursion
+            div making and eating breakfast
+            div talking to strangers
+            div sincerity
+            div #[a(href="https://open.spotify.com/user/1281321896?si=CCd4i2oyQSmavNQ1vLLL0Q") moody music]
+            div armchair psychology
+            div concurrency
+            div not having a plan
+            div pretending to know how to play piano + guitar
+            div coffee + tea
+            div being a human bean
+            div airplane mode
+            div #[a(href="https://bsteephenson.github.io") pretending to have a personality]
+            div a biweekly existential crisis
+            div calling random places "home"
+            div oversharing on the internet and regretting it later
+            div serendipity
+            div naps
+        br
+        br
+        p benjaminsteephenson [at] gmail.com
+        br
+        br
+        div.color-box-container
+            
+            - var i = 0
+            while i < 100
+                - var time = Math.random() + 1.5
+                - var delay = (Math.random() - .5) * time 
+                div.color-box(style="animation-delay:#{delay}s; animation-duration:#{time}s;")
+                - i++;
+        
+        script.
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
 
-		script.
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-68483191-1', 'auto');
+            ga('create', 'UA-68483191-1', 'auto');
 

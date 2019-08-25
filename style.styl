@@ -15,9 +15,46 @@ body
 .stuff
 	display: flex
 	flex-wrap: wrap
-	justify-content: flex-start
+	justify-content: space-around
 	a
 		text-decoration: none
 	div
 		margin: 15 40 15 0 
 	font-size: 42px * .5 * .75
+@keyframes bg-color {
+	0% {
+		background-color: #32CD32;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		background-color: #00BFFF;
+	}
+}
+.color-box-container
+	display: flex
+	flex-wrap: wrap
+	align-content: stretch
+	width:1000px
+	margin: 0
+	padding: 0
+	.color-box
+		margin: 5px
+		width: 40px
+		height: 40px
+		animation-name: bg-color;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+.delay1 {
+	animation-delay: .25s;
+}
+
+.delay2 {
+	animation-delay: .5s;
+}
+
+.faster {
+	animation-duration: 1.5s;
+}
